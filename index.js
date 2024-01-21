@@ -1,9 +1,10 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
   for(let i = 0; i < array.length-1; i++){
+    let complement = target - array[i]
     for(let j = i; j < array.length; j++){
       if(i !== j){
-        if(target - array[i] === array[j]){
+        if(complement === array[j]){
           return true
         }
       }
@@ -14,12 +15,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Write the Big O time complexity of your function here
-  O(n)
+  O(n^2)
 */
 
-/* 
-  Add your pseudocode here
-*/
 
 /*
   Add written explanation of your solution here
